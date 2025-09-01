@@ -1,0 +1,58 @@
+<header class="topbar">
+  <a class="brand" routerLink="/">
+    <img src="assets/images/logo.svg" alt="Logo AmazoOn du Web" width="36" height="36">
+    <span>AmazoOn du Web</span>
+  </a>
+  <nav class="nav">
+    <a routerLink="/a-propos" routerLinkActive="active">À propos</a>
+    <a routerLink="/impact" routerLinkActive="active">Impact</a>
+    <a routerLink="/projets" routerLinkActive="active">Projets</a>
+    <a routerLink="/temoignages" routerLinkActive="active">Témoignages</a>
+    <a routerLink="/actualites" routerLinkActive="active">Actualités</a>
+    <a routerLink="/partenaires" routerLinkActive="active">Partenaires</a>
+    <a routerLink="/contact" routerLinkActive="active">Contact</a>
+  </nav>
+  <div class="cta">
+    <a class="btn outline" routerLink="/a-propos">Rejoindre</a>
+    <a class="btn" routerLink="/soutenir">Soutenir</a>
+  </div>
+</header>
+
+<main class="content">
+  <router-outlet />
+</main>
+
+<footer class="footer">
+  <div class="grid">
+    <div>
+      <div class="fbrand">
+        <img src="assets/images/logo.svg" alt="Logo AmazoOn" width="36" height="36">
+        <strong>AmazoOn du Web</strong>
+      </div>
+      <p>Inclusion numérique des femmes et des jeunes filles en Afrique francophone.</p>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <ul>
+        <li><a routerLink="/">Accueil</a></li>
+        <li><a routerLink="/impact">Impact</a></li>
+        <li><a routerLink="/projets">Projets</a></li>
+        <li><a routerLink="/actualites">Actualités</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>Abidjan, Côte d’Ivoire</p>
+      <p><a href="mailto:contact@amazoonduweb.org">contact@amazoonduweb.org</a></p>
+    </div>
+    <div>
+      <h4>Agissez</h4>
+      <p><a class="btn sm" routerLink="/soutenir">Faire un don</a></p>
+      <p><a class="btn sm outline" routerLink="/a-propos">Devenir bénévole</a></p>
+    </div>
+  </div>
+  <div class="sub">
+    © {{ currentYear }} AmazoOn du Web — Tous droits réservés
+.
+  </div>
+</footer>
