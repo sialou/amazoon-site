@@ -1,0 +1,4 @@
+.wrap{padding:2rem 1rem}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+  
