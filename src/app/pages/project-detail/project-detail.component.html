@@ -1,0 +1,32 @@
+<section class="who-we-are">
+  <div class="content">
+    <h2>Who We Are</h2>
+    <p>
+      Educate Girls works with the government, community and village-based
+      volunteers and mentors to ensure every girl in the remotest parts of
+      India is included, educated and empowered with choices and voices.
+    </p>
+  </div>
+
+  <div class="image-wrapper">
+    <img src="assets/images/ACF.jpg" alt="Educate Girls Team" />
+  </div>
+</section>
+
+<section class="wrap" *ngIf="proj">
+    <a routerLink="/projets">← Retour</a>
+    <h1>{{proj.title}}</h1>
+    <img class="cover" [src]="proj.cover" [alt]="proj.title">
+    <div class="meta">
+      <span><strong>Objectif:</strong> {{proj.objective}}</span>
+      <span><strong>Zone:</strong> {{proj.location}}</span>
+      <span><strong>Partenaires:</strong> {{proj.partners.join(', ')}}</span>
+    </div>
+    <div class="body" *ngIf="proj.body">{{proj.body}}</div>
+    <h3>Résultats</h3>
+    <ul><li *ngFor="let r of proj.results">{{r}}</li></ul>
+    <figure *ngIf="proj.quote">
+      <blockquote>“{{proj.quote.text}}”</blockquote>
+      <figcaption>— {{proj.quote.author}}</figcaption>
+    </figure>
+  </section>

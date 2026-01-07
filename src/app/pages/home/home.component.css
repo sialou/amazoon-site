@@ -1,0 +1,11 @@
+    .section{padding:2rem 1rem}
+    h2{margin:0 0 1rem 0}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+    .tgrid{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .see-all{margin-top:1rem}
+    .cta{padding:2rem 1rem}
+    .box{border:1px solid #e5e7eb;background:#f9fafb;padding:1.5rem;border-radius:1rem}
+    .actions{display:flex;gap:.5rem;margin-top:.5rem}
+    .btn{display:inline-block;padding:.6rem 1rem;border-radius:.75rem;background:#2563eb;color:white;text-decoration:none;font-weight:600;border:1px solid #2563eb}
+    .btn.outline{background:transparent;color:#2563eb}
+    @media (max-width:900px){.grid,.tgrid{grid-template-columns:1fr}}

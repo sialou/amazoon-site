@@ -1,0 +1,30 @@
+<section class="who-we-are">
+  <div class="content">
+    <div class="animated-line"></div>
+
+    <h2 class="title">Actualités</h2>
+
+    <p class="description">
+     
+Notre travail ne serait pas possible sans nos partenaires corporatifs, nos fondations partenaires et nos contributeurs individuels.
+    </p>
+  </div>
+
+  <div class="image-wrapper">
+    <img src="assets/images/4.jpg" alt="Educate Girls Team" />
+  </div>
+</section>
+
+<section class="wrap">
+    <h1>Actualités</h1>
+    <div class="grid">
+      <article class="card" *ngFor="let n of data.news">
+        <img [src]="n.image" [alt]="n.title">
+        <div class="b">
+          <h3>{{n.title}}</h3>
+          <div class="muted">{{n.date | date}}</div>
+          <p>{{n.excerpt}}</p>
+        </div>
+      </article>
+    </div>
+  </section>
