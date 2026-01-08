@@ -5,15 +5,13 @@
   </a>
   <nav class="nav">
     <a routerLink="/a-propos" routerLinkActive="active">À propos</a>
-    <a routerLink="/impact" routerLinkActive="active">Impact</a>
     <a routerLink="/projets" routerLinkActive="active">Projets</a>
-    <a routerLink="/temoignages" routerLinkActive="active">Témoignages</a>
     <a routerLink="/actualites" routerLinkActive="active">Actualités</a>
     <a routerLink="/partenaires" routerLinkActive="active">Partenaires</a>
     <a routerLink="/contact" routerLinkActive="active">Contact</a>
   </nav>
   <div class="cta">
-    <a class="btn outline" routerLink="/a-propos">Rejoindre</a>
+    <a class="btn outline" routerLink="/rejoindre">Rejoindre</a>
     <a class="btn" routerLink="/soutenir">Soutenir</a>
   </div>
 </header>
@@ -23,52 +21,66 @@
 </main>
 
 <footer class="footer">
+
   <div class="grid">
-    <div>
+
+    <!-- BRAND -->
+    <div class="footer-brand">
       <div class="fbrand">
-        <img src="assets/images/amazoon_logo.png" alt="Logo AmazoOn" width="100" height="50">
-      
+        <img src="assets/images/amazoon_logo.png" alt="Logo AmazoOn">
       </div>
-      <p>Inclusion numérique des femmes et des jeunes filles en Afrique francophone.</p>
+      <p>
+        Inclusion numérique des femmes et des jeunes filles
+        en Afrique francophone.
+      </p>
     </div>
+
+    <!-- NAV -->
     <div>
       <h4>Navigation</h4>
       <ul>
         <li><a routerLink="/">Accueil</a></li>
-        <li><a routerLink="/impact">Impact</a></li>
+        <li><a routerLink="/partenaires">Partenaires</a></li>
         <li><a routerLink="/projets">Projets</a></li>
         <li><a routerLink="/actualites">Actualités</a></li>
       </ul>
     </div>
+
+    <!-- CONTACT -->
     <div>
       <h4>Contact</h4>
       <p>Abidjan, Côte d’Ivoire</p>
-      <p><a href="mailto:contact@amazoonduweb.org">contact@amazoonduweb.org</a></p>
+      <p>
+        <a href="mailto:contact@amazoonduweb.org">
+          contact@amazoonduweb.org
+        </a>
+      </p>
     </div>
+
+    <!-- ACTION -->
     <div>
       <h4>Agissez</h4>
-    <div class="socials">
-  <a href="#" aria-label="Facebook">
-    <i class="fab fa-facebook-f"></i>
-  </a>
-  <a href="#" aria-label="Instagram">
-    <i class="fab fa-instagram"></i>
-  </a>
-  <a href="#" aria-label="LinkedIn">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-  <a href="#" aria-label="Twitter">
-    <i class="fab fa-x-twitter"></i>
-  </a>
-</div>
 
+      <div class="socials">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+      </div>
 
-      <p><a class="btn sm" routerLink="/soutenir">Faire un don</a></p>
-      <p><a class="btn sm outline" routerLink="/a-propos">Devenir bénévole</a></p>
+      <p>
+        <a class="btn sm" routerLink="/soutenir">Faire un don</a>
+      </p>
+      <p>
+        <a class="btn sm outline" routerLink="/a-propos">Devenir bénévole</a>
+      </p>
     </div>
+
   </div>
+
   <div class="sub">
     © {{ currentYear }} AmazoOn du Web — Tous droits réservés
-.
   </div>
+
 </footer>
+

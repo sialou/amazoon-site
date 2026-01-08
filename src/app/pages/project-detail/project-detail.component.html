@@ -13,20 +13,18 @@
   </div>
 </section>
 
-<section class="wrap" *ngIf="proj">
-    <a routerLink="/projets">← Retour</a>
-    <h1>{{proj.title}}</h1>
-    <img class="cover" [src]="proj.cover" [alt]="proj.title">
-    <div class="meta">
-      <span><strong>Objectif:</strong> {{proj.objective}}</span>
-      <span><strong>Zone:</strong> {{proj.location}}</span>
-      <span><strong>Partenaires:</strong> {{proj.partners.join(', ')}}</span>
-    </div>
-    <div class="body" *ngIf="proj.body">{{proj.body}}</div>
-    <h3>Résultats</h3>
-    <ul><li *ngFor="let r of proj.results">{{r}}</li></ul>
-    <figure *ngIf="proj.quote">
-      <blockquote>“{{proj.quote.text}}”</blockquote>
-      <figcaption>— {{proj.quote.author}}</figcaption>
-    </figure>
-  </section>
+<section class="project-detail">
+  <div class="detail-hero">
+    <img [src]="project.image" alt="">
+    <div class="overlay"></div>
+    <h1>{{ project.title }}</h1>
+  </div>
+
+  <div class="detail-content container">
+    <p>{{ project.description }}</p>
+
+    <ul class="project-highlights">
+      <li *ngFor="let item of project.highlights">{{ item }}</li>
+    </ul>
+  </div>
+</section>

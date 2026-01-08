@@ -26,7 +26,7 @@ export class DataService {
       title: 'Chaque fille connectée est une opportunité qui grandit.',
       subtitle: 'Nous accompagnons les femmes et les jeunes filles à accéder aux compétences numériques et aux métiers du futur.',
       ctas: [{ label: 'Rejoindre', link: '/a-propos' }, { label: 'Soutenir', link: '/soutenir' }],
-      image: 'assets/images/hero.jpg'
+      image: 'assets/images/4.jpg'
     }
   };
 
@@ -41,7 +41,7 @@ export class DataService {
     {
       slug: 'whocode',
       title: 'WHOCODE — Initiation au code pour les jeunes filles',
-      cover: 'assets/images/project-whocode.jpg',
+      cover: 'assets/images/4.jpg',
       objective: 'Initier 1 000 jeunes filles au code (HTML, CSS, Python) et aux bases de l’IA responsable.',
       location: 'Abidjan & régions',
       partners: ['AFJCI', 'ACF', 'Lycées partenaires'],
@@ -57,7 +57,7 @@ export class DataService {
     {
       slug: 'stem-for-girls',
       title: 'STEM 4 Girls — Ateliers sciences & robotique',
-      cover: 'assets/images/project-stem.jpg',
+      cover: 'assets/images/4.jpg',
       objective: 'Donnons une première expérience pratique des STEM à des collégiennes et lycéennes.',
       location: 'Côte d’Ivoire (multi-villes)',
       partners: ['Établissements publics', 'Entreprises tech'],
@@ -74,14 +74,14 @@ export class DataService {
   ];
 
   news: NewsItem[] = [
-    { slug: 'atelier-cocody', title: 'Atelier numérique à Cocody', date: '2025-07-18', excerpt: 'Retour sur une journée de découverte du code.', image: 'assets/images/news-1.jpg' },
-    { slug: 'prix-ong-2025', title: 'AmazoOn du Web lauréat', date: '2025-05-09', excerpt: 'Notre travail primé lors d’un forum des ONG.', image: 'assets/images/news-2.jpg' }
+    { slug: 'atelier-cocody', title: 'Atelier numérique à Cocody', date: '2025-07-18', excerpt: 'Retour sur une journée de découverte du code.', image: 'assets/images/4.jpg' },
+    { slug: 'prix-ong-2025', title: 'AmazoOn du Web lauréat', date: '2025-05-09', excerpt: 'Notre travail primé lors d’un forum des ONG.', image: 'assets/images/4.jpg' }
   ];
 
   partners = [
-    { name: 'AFJCI', logo: 'assets/images/partner-afjci.png', url: '#' },
-    { name: 'ACF', logo: 'assets/images/partner-acf.png', url: '#' },
-    { name: 'Établissements scolaires', logo: 'assets/images/partner-school.png', url: '#' }
+    { name: 'AFJCI', logo: 'assets/images/4.jpg', url: '#' },
+    { name: 'ACF', logo: 'assets/images/4.jpg', url: '#' },
+    { name: 'Établissements scolaires', logo: 'assets/images/4.jpg', url: '#' }
   ];
 
   getProjectBySlug(slug: string) {

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule, DatePipe } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 interface News {
   image: string;
@@ -9,21 +10,34 @@ interface News {
 }
 @Component({
   selector: 'app-news',
-  imports: [CommonModule, DatePipe],
+  imports: [CommonModule, DatePipe, RouterModule],
   templateUrl: './news.component.html',
   styleUrl: './news.component.css'
 })
 export class NewsComponent {
-data: {
-    news: News[];
-  } = {
-    news: [
-      {
-        image: 'assets/news/1.jpg',
-        title: 'Lancement du projet X',
-        date: '2025-01-10',
-        excerpt: 'Un nouveau projet pour renforcer l’impact social.'
-      }
-    ]
-  };
+newsList = [
+  {
+    title: 'Formation numérique à Yopougon',
+    slug: 'formation-numerique-yopougon',
+    date: 'Mars 2025',
+    excerpt: 'Plus de 120 femmes formées aux compétences digitales de base.',
+    image: 'assets/images/4.jpg'
+  },
+  {
+    title: 'Meet-up Femmes & Tech',
+    slug: 'meetup-femmes-tech',
+    date: 'Février 2025',
+    excerpt: 'Un espace d’échange et d’inspiration pour les femmes du numérique.',
+    image: 'assets/images/4.jpg'
+  }
+  ,
+  {
+    title: 'Meet-up Femmes & Tech',
+    slug: 'meetup-femmes-tech',
+    date: 'Février 2025',
+    excerpt: 'Un espace d’échange et d’inspiration pour les femmes du numérique.',
+    image: 'assets/images/4.jpg'
+  }
+];
+
 }

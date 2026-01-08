@@ -1,3 +1,4 @@
+
 <section class="who-we-are">
   <div class="content">
     <div class="animated-line"></div>
@@ -13,42 +14,40 @@
     <img src="assets/images/TIC.jpg" alt="Educate Girls Team" />
   </div>
 </section>
-  <section class="actions-section">
 
+<section class="project">
+<section class="actions-hero">
+  <div class="hero-shapes"></div>
 
-
-  <!-- Description du programme principal avec background -->
-  <div class="actions-description bg-section">
-    <h2>Qu’est‑ce que nous faisons</h2>
+  <div class="hero-content container">
+    <h1>Nos projets pour l’inclusion numérique</h1>
     <p>
-      Depuis 2012, nous mettons en place des programmes de formation numérique, des meet‑ups et des ateliers pour développer les compétences digitales des femmes et jeunes filles en Côte d’Ivoire.
-    </p>
-    <p>
-      Nos activités incluent des sessions communautaires, des formations en compétences digitales et des événements visant à réduire l’écart de genre dans l’espace technologique.
+      Depuis 2012, AmazoOn du Web déploie des projets innovants pour former,
+      autonomiser et connecter les femmes et jeunes filles au numérique.
     </p>
   </div>
+</section>
+<section class="projects-list container">
+  <h2 class="section-title">Nos projets</h2>
 
-  <!-- Autre section d’actions avec un autre background -->
-  <div class="actions-stories bg-section">
-    <h2>Histoires de changement</h2>
-    <div class="story-card">
-      <h3>Marie</h3>
-      <p>
-        Marie a rejoint notre programme « Each one ‑ gets one » et a acquis des compétences en informatique qui lui ont permis de lancer sa propre activité freelance.
-      </p>
-    </div>
-    <div class="story-card">
-      <h3>Fatou</h3>
-      <p>
-        Après nos ateliers de numérique, Fatou a été embauchée comme assistante digitale dans une PME locale.
-      </p>
-    </div>
-  </div>
+  <div class="projects-grid">
+    <article
+      class="project-card"
+      *ngFor="let project of projects"
+      [routerLink]="['/projets', project.slug]"
+    >
+      <div class="project-image">
+        <img [src]="project.image" [alt]="project.title">
+      </div>
 
-  <!-- CTA -->
-  <div class="actions-cta">
-    <p>Envie de contribuer à nos actions ?</p>
-    <button>Je veux aider</button>
+      <div class="project-content">
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.excerpt }}</p>
+        <span class="read-more">Découvrir →</span>
+      </div>
+    </article>
   </div>
+</section>
+
 
 </section>

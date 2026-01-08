@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ImpactComponent } from './impact.component';
+import { VolunteerComponent } from './volunteer.component';
 
-describe('ImpactComponent', () => {
-  let component: ImpactComponent;
-  let fixture: ComponentFixture<ImpactComponent>;
+describe('Volunteer', () => {
+  let component: VolunteerComponent;
+  let fixture: ComponentFixture<VolunteerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ImpactComponent]
+      imports: [VolunteerComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ImpactComponent);
+    fixture = TestBed.createComponent(VolunteerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

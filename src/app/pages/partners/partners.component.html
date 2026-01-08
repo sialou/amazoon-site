@@ -50,7 +50,7 @@ Notre travail ne serait pas possible sans nos partenaires corporatifs, nos fonda
     <p>
       AmazoOn du Web met en place des programmes de formation numérique, ateliers et meet-ups pour développer les compétences digitales et favoriser l’inclusion numérique.
     </p>
-    <img src="assets/images/partnership-hero.jpg" alt="Collaboration AmazoOn">
+    <img src="assets/images/partenaire.jpg" alt="Collaboration AmazoOn">
   </div>
 
   <!-- Comment s’impliquer -->
@@ -74,20 +74,34 @@ Notre travail ne serait pas possible sans nos partenaires corporatifs, nos fonda
         <p>Créez des événements ou campagnes pour sensibiliser et former les femmes.</p>
       </div>
     </div>
-    <div class="cta-button">
-      <button>Commencer un partenariat</button>
-    </div>
   </div>
 
   <!-- Nos partenaires -->
-  <div class="our-partners container">
-    <h2>Nos partenaires</h2>
-    <ul>
-      <li>Fondation ABC</li>
-      <li>TechCorp CI</li>
-      <li>Global Women Network</li>
-      <li>Initiative Jeunesse et Digital</li>
-    </ul>
+<section class="partners-strip amazoon">
+  <h2>Ils nous font confiance</h2>
+
+  <div class="partners-slider">
+    <div class="partners-track">
+      <div
+        class="partner-card"
+        *ngFor="let partner of partners"
+      >
+        <img [src]="partner.logo" [alt]="partner.name">
+      </div>
+
+      <!-- duplication pour boucle infinie -->
+      <div
+        class="partner-card"
+        *ngFor="let partner of partners"
+      >
+        <img [src]="partner.logo" [alt]="partner.name">
+      </div>
+    </div>
   </div>
+</section>
+
+
+
+
 
 </section>
