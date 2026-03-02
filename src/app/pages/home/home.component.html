@@ -26,8 +26,8 @@
       </p>
 
       <div class="hero-actions">
-        <a class="btn primary">Rejoindre</a>
-        <a class="btn secondary">Soutenir</a>
+        <a routerLink="/rejoindre" class="btn primary">Rejoindre</a>
+        <a routerLink="/soutenir" class="btn secondary">Soutenir</a>
       </div>
     </div>
 
@@ -45,28 +45,31 @@
 
 
   <!-- IMPACT -->
-  <section class="impact container">
-    <h2>Notre impact</h2>
+<section class="impact container" #impactSection>
+  <h2>Notre impact</h2>
 
-    <div class="impact-grid">
-      <div class="impact-card">
-        <span>+30 000</span>
-        <p>Femmes & filles formées</p>
-      </div>
-      <div class="impact-card">
-        <span>40+</span>
-        <p>Programmes conduits</p>
-      </div>
-      <div class="impact-card">
-        <span>10</span>
-        <p>Années d’action</p>
-      </div>
-      <div class="impact-card">
-        <span>100+</span>
-        <p>Communautés touchées</p>
-      </div>
+  <div class="impact-grid">
+    <div class="impact-card">
+      <span>+{{ count1 | number }}</span>
+      <p>Femmes & filles formées</p>
     </div>
-  </section>
+
+    <div class="impact-card">
+      <span>{{ count2 }}</span>
+      <p>Programmes conduits</p>
+    </div>
+
+    <div class="impact-card">
+      <span>{{ count3 }}</span>
+      <p>Années d’action</p>
+    </div>
+
+    <div class="impact-card">
+      <span>{{ count4 }}</span>
+      <p>Communautés touchées</p>
+    </div>
+  </div>
+</section>
 
   <!-- PROJETS PHARES -->
   <section class="featured-projects bg-section">
@@ -155,8 +158,8 @@
     </p>
 
     <div class="cta-actions">
-      <a routerLink="/devenir-benevole" class="btn primary">Devenir bénévole</a>
-      <a routerLink="/don" class="btn outline">Faire un don</a>
+      <a routerLink="/rejoindre" class="btn primary">Devenir bénévole</a>
+      <a routerLink="/soutenir" class="btn outline">Faire un don</a>
     </div>
   </section>
 

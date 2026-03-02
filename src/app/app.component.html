@@ -1,19 +1,37 @@
 <header class="topbar">
+  
   <a class="brand" routerLink="/">
-    <img src="assets/images/amazoon_logo.png"  alt="Logo AmazoOn du Web" width="100" height="50">
-   
+    <img src="assets/images/amazoon_logo.png" alt="Logo AmazoOn du Web" width="100" height="50">
   </a>
-  <nav class="nav">
-    <a routerLink="/a-propos" routerLinkActive="active">À propos</a>
-    <a routerLink="/projets" routerLinkActive="active">Projets</a>
-    <a routerLink="/actualites" routerLinkActive="active">Actualités</a>
-    <a routerLink="/partenaires" routerLinkActive="active">Partenaires</a>
-    <a routerLink="/contact" routerLinkActive="active">Contact</a>
+
+  <!-- BOUTON MOBILE -->
+  <button class="menu-toggle" (click)="isMenuOpen = !isMenuOpen">
+    ☰
+  </button>
+
+  <nav class="nav" [class.open]="isMenuOpen">
+    <a routerLink="/" 
+       routerLinkActive="active"
+       [routerLinkActiveOptions]="{ exact: true }"
+       (click)="isMenuOpen = false">
+       Accueil
+    </a>
+
+    <a routerLink="/a-propos" routerLinkActive="active" (click)="isMenuOpen = false">À propos</a>
+    <a routerLink="/projets" routerLinkActive="active" (click)="isMenuOpen = false">Projets</a>
+    <a routerLink="/actualites" routerLinkActive="active" (click)="isMenuOpen = false">Actualités</a>
+    <a routerLink="/partenaires" routerLinkActive="active" (click)="isMenuOpen = false">Partenaires</a>
+    <a routerLink="/contact" routerLinkActive="active" (click)="isMenuOpen = false">Contact</a>
+
   </nav>
+
   <div class="cta">
-    <a class="btn outline" routerLink="/rejoindre">Rejoindre</a>
-    <a class="btn" routerLink="/soutenir">Soutenir</a>
+    <a class="btn outline" routerLink="/rejoindre" (click)="isMenuOpen = false">Rejoindre</a>
+    <a class="btn" routerLink="/soutenir" (click)="isMenuOpen = false">Soutenir</a>
   </div>
+
+
+
 </header>
 
 <main class="content">
@@ -59,7 +77,10 @@
 
     <!-- ACTION -->
     <div>
-      <h4>Agissez</h4>
+      <h4>Suivez Nous</h4>
+<!-- Assurez-vous d'avoir "node_modules/@fortawesome/fontawesome-free/css/all.min.css" 
+     dans votre angular.json -->
+
 
       <div class="socials">
         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -68,12 +89,6 @@
         <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
       </div>
 
-      <p>
-        <a class="btn sm" routerLink="/soutenir">Faire un don</a>
-      </p>
-      <p>
-        <a class="btn sm outline" routerLink="/a-propos">Devenir bénévole</a>
-      </p>
     </div>
 
   </div>
