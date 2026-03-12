@@ -275,3 +275,136 @@
     font-size: 2.2rem;
   }
 }
+
+
+/*new*/
+.donation-section {
+  background:
+    linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92));
+  padding: 6rem 1rem;
+}
+
+.donation-card {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.1);
+}
+
+/* SEGMENTED SWITCH */
+.segmented-switch {
+  display: flex;
+  background: #e5e5e5;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.segmented-switch.small {
+  font-size: 0.9rem;
+}
+
+.segment {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+}
+
+.segment.active {
+  background: #e3398b;
+  color: white;
+}
+
+.triangle {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #e3398b;
+}
+
+/* MONTANTS */
+.amount-options {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.amount-options button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  border: 2px solid #4a90e2;
+  background: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.amount-options button.selected {
+  background: #4a90e2;
+  color: white;
+  border-color: #4a90e2;
+}
+
+/* FORM */
+input, select, textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+}
+
+.checkbox {
+  margin-bottom: 1rem;
+}
+
+/* PAIEMENT */
+.payment-logos {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.payment-item {
+  border: 2px solid #ddd;
+  padding: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+  width: 110px;
+}
+
+.payment-item i {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.payment-item.active {
+  border-color: #e3398b;
+  background: rgba(227,57,139,0.1);
+}
+
+.btn-donate {
+  width: 100%;
+  padding: 1rem;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 2rem;
+}

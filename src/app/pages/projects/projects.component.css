@@ -210,7 +210,7 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 30px;
 }
 
@@ -237,6 +237,9 @@
   padding: 25px;
 }
 
+.project-content h3 {
+color:#e3398b;
+}
 .impact-section {
 background: #f9f6ff;
     padding: 10px 20px;

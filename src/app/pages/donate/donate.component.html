@@ -40,27 +40,7 @@
         aux compétences numériques et de créer un impact durable en Afrique.
       </p>
 
-      <div class="cards">
 
-        <div class="card">
-          <h3>Don unique</h3>
-          <p>
-            Participez selon vos moyens et soutenez directement
-            nos programmes d’inclusion numérique.
-          </p>
-          <a class="btn primary" href="#">Faire un don</a>
-        </div>
-
-        <!-- prêt pour extension -->
-        <!--
-        <div class="card outline">
-          <h3>Don récurrent</h3>
-          <p>Soutenez-nous chaque mois pour un impact continu.</p>
-          <a class="btn secondary" href="#">Je m’engage</a>
-        </div>
-        -->
-
-      </div>
     </div>
 
     <!-- IMAGE -->
@@ -69,6 +49,169 @@
         <img src="assets/images/ZOON.jpg" alt="Soutenir les femmes par le numérique">
       </div>
     </div>
+
+  </div>
+
+</section>
+<section class="donation-section">
+
+  <div class="donation-card">
+
+    <!-- ================= TYPE DE DON ================= -->
+
+    <h2>Soutenir notre action</h2>
+
+    <div class="segmented-switch">
+
+      <div class="segment"
+           [class.active]="donationType === 'cash'"
+           (click)="setDonationType('cash')">
+        Don en espèces
+        <div class="triangle" *ngIf="donationType === 'cash'"></div>
+      </div>
+
+      <div class="segment"
+           [class.active]="donationType === 'nature'"
+           (click)="setDonationType('nature')">
+        Don en nature
+        <div class="triangle" *ngIf="donationType === 'nature'"></div>
+      </div>
+
+    </div>
+
+    <!-- ================= ESPECES ================= -->
+
+    <div *ngIf="donationType === 'cash'">
+
+      <h3>Le montant de mon don</h3>
+
+      <!-- SWITCH FREQUENCE -->
+      <div class="segmented-switch small">
+
+        <div class="segment"
+             [class.active]="frequency === 'once'"
+             (click)="setFrequency('once')">
+          Je donne une fois
+          <div class="triangle" *ngIf="frequency === 'once'"></div>
+        </div>
+
+        <div class="segment"
+             [class.active]="frequency === 'monthly'"
+             (click)="setFrequency('monthly')">
+          ❤️ Je donne tous les mois
+          <div class="triangle" *ngIf="frequency === 'monthly'"></div>
+        </div>
+
+      </div>
+
+      <!-- MONTANTS -->
+      <div class="amount-options">
+        <button *ngFor="let amount of amounts"
+                [class.selected]="selectedAmount === amount"
+                (click)="selectAmount(amount)">
+          {{amount}} FCFA
+        </button>
+      </div>
+
+      <input type="number"
+             placeholder="Autre montant (FCFA)"
+             (input)="selectedAmount = null">
+
+    </div>
+
+    <!-- ================= COORDONNEES (COMMUN) ================= -->
+
+    <hr>
+
+    <h3>Mes coordonnées</h3>
+
+    <input type="email" placeholder="Email *" required>
+
+    <label class="checkbox">
+      <input type="checkbox" [(ngModel)]="isOrganization">
+      Je suis une organisation ou une société
+    </label>
+
+    <input *ngIf="isOrganization"
+           type="text"
+           placeholder="Raison sociale *">
+
+    <div class="row">
+      <select>
+        <option value="">Civilité *</option>
+        <option>Madame</option>
+        <option>Monsieur</option>
+      </select>
+      <input type="text" placeholder="Prénom *">
+    </div>
+
+    <input type="text" placeholder="Nom *">
+    <input type="tel" placeholder="Téléphone *">
+    <input type="text" placeholder="Adresse *">
+
+    <div class="row">
+      <input type="text" placeholder="Ville *">
+      <select>
+        <option>CÔTE D'IVOIRE</option>
+        <option>France</option>
+        <option>Sénégal</option>
+      </select>
+    </div>
+
+    <!-- ================= DON EN NATURE ================= -->
+
+    <div *ngIf="donationType === 'nature'">
+
+      <hr>
+      <h3>Détails du don en nature</h3>
+
+      <textarea placeholder="Que souhaitez-vous donner ? *"></textarea>
+      <input type="text" placeholder="Lieu de récupération *">
+
+    </div>
+
+    <!-- ================= PAIEMENT ================= -->
+
+    <div *ngIf="donationType === 'cash'">
+
+      <hr>
+      <h3>Mon mode de paiement</h3>
+
+      <div class="payment-logos">
+
+        <div class="payment-item"
+             [class.active]="paymentMethod === 'card'"
+             (click)="selectPayment('card')">
+          <i class="fas fa-credit-card"></i>
+          <span>Carte</span>
+        </div>
+
+        <div class="payment-item"
+             [class.active]="paymentMethod === 'virement'"
+             (click)="selectPayment('virement')">
+          <i class="fab fa-bolt"></i>
+          <span>Virement instantané</span>
+        </div>
+
+        <div class="payment-item"
+             [class.active]="paymentMethod === 'mobile'"
+             (click)="selectPayment('mobile')">
+          <i class="fab fa-wallet"></i>
+          <span>Mobile Money</span>
+        </div>
+
+         <div class="payment-item"
+             [class.active]="paymentMethod === 'check'"
+             (click)="selectPayment('check')">
+          <i class="fab fa-money-check"></i>
+          <span>Chèque</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <button class="btn-donate">Valider mon don</button>
 
   </div>
 

@@ -18,22 +18,34 @@ interface Project {
 export class ProjectsComponent {
  projects = [
   {
-    title: 'Each One – Gets One',
-    slug: 'each-one-gets-one',
-    excerpt: 'Un programme de mentorat et de transmission des compétences numériques.',
-    image: 'assets/images/4.jpg'
+    title: 'STEM 4 Girls ',
+    slug: 'STEM-4-Girls ',
+    excerpt: 'Accroître la participation et le leadership des adolescentes dans les filières scientifiques et technologiques.',
+    image: 'assets/images/p1.png'
   },
   {
-    title: 'Women Digital Bootcamp',
-    slug: 'women-digital-bootcamp',
-    excerpt: 'Formation intensive en compétences digitales pour femmes.',
-    image: 'assets/images/4.jpg'
+    title: 'Safe Digital Communities ',
+    slug: 'Safe-Digital-Communities ',
+    excerpt: 'Promouvoir un usage responsable, sécurisé et citoyen du numérique au sein des communautés éducatives.Programme pour la promotion de la citoyenneté numérique responsable dans les communautés éducatives.',
+    image: 'assets/images/p2.png'
   },
   {
-    title: 'Meet-Up Tech Féminin',
-    slug: 'meet-up-tech',
-    excerpt: 'Rencontres et échanges entre femmes du numérique.',
-    image: 'assets/images/4.jpg'
+    title: 'Women Digital Empowerment Accelerator' ,
+    slug: 'Women-Digital-Empowerment-Accelerator',
+    excerpt: 'Renforcer l’autonomisation économique des femmes à travers l’accès aux opportunités de l’économie numérique.',
+    image: 'assets/images/p3.png'
+  },
+  {
+    title: 'Rural Woman-Digital ' ,
+    slug: 'Rural-Woman-Digital ',
+    excerpt: 'Permettre aux femmes d’acquérir des compétences numériques pour avancer dans leur activité et développer leurs business en ligne en utilisant des outils numériques et Internet.',
+    image: 'assets/images/p4.png'
+  },
+  {
+    title: 'DFH' ,
+    slug: 'DFH ',
+    excerpt: 'Mettre en lumière des femmes inspirantes qui utilisent le digital pour développer leurs activités, accroître leur visibilité et faire grandir leur business.',
+    image: 'assets/images/p5.png'
   }
 ];
 
