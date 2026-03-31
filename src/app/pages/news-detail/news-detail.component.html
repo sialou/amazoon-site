@@ -1,0 +1,65 @@
+<section class="news-detail">
+
+  <!-- HEADER SIMPLE -->
+  <div class="top-bar container">
+    <button class="back-btn" routerLink="/actualites">
+      ← Retour aux actualités
+    </button>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero container">
+    <div class="hero-image">
+      <img [src]="news?.image" alt="">
+    </div>
+
+    <div class="hero-text">
+      <span class="date">
+        {{ news?.date | date:'longDate' }}
+      </span>
+
+      <h1>{{ news?.title }}</h1>
+
+    <div class="share-group">
+  <span>Partager :</span>
+
+  <button class="share-btn whatsapp" (click)="share('whatsapp')">
+    <i class="fab fa-whatsapp"></i>
+  </button>
+
+  <button class="share-btn facebook" (click)="share('facebook')">
+    <i class="fab fa-facebook-f"></i>
+  </button>
+
+  <button class="share-btn twitter" (click)="share('twitter')">
+    <i class="fab fa-x-twitter"></i>
+  </button>
+</div>
+    </div>
+  </div>
+
+  <!-- CONTENU -->
+  <div class="content container">
+    <div [innerHTML]="news?.content"></div>
+  </div>
+
+  <!-- AUTRES ACTUALITÉS -->
+  <div class="related container">
+    <h2>Autres actualités</h2>
+
+    <div class="related-grid">
+      <article
+        class="related-card"
+        *ngFor="let item of relatedNews"
+        [routerLink]="['/actualites', item.slug]"
+      >
+        <img [src]="item.image">
+        <div class="card-body">
+          <h3>{{ item.title }}</h3>
+          <span>{{ item.date | date:'mediumDate' }}</span>
+        </div>
+      </article>
+    </div>
+  </div>
+
+</section>

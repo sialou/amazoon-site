@@ -8,6 +8,7 @@ import { PartnersComponent } from './pages/partners/partners.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { DonateComponent } from './pages/donate/donate.component';
 import { AboutComponent } from './pages/about/about.component';
+import { NewsDetailComponent } from './pages/news-detail/news-detail.component';
 
 
 export const routes: Routes = [
@@ -15,6 +16,7 @@ export const routes: Routes = [
   { path: 'projets', component: ProjectsComponent, title: 'Nos projets — AmazoOn du Web' },
   { path: 'projets/:slug', component: ProjectDetailComponent, title: 'Projet — AmazoOn du Web' },
   { path: 'actualites', component: NewsComponent, title: 'Actualités — AmazoOn du Web' },
+  {path: 'actualites/:slug', component: NewsDetailComponent, title: 'Actualités — AmazoOn du Web'},
   { path: 'partenaires', component: PartnersComponent, title: 'Partenaires — AmazoOn du Web' },
   { path: 'contact', component: ContactComponent, title: 'Contact — AmazoOn du Web' },
   { path: 'rejoindre', component: VolunteerComponent , title: 'Rejoindre — AmazoOn du Web' },

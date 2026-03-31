@@ -1,0 +1,197 @@
+/* RESET SCROLL BUG */
+body, html {
+  overflow-x: hidden;
+}
+
+/* GLOBAL */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.news-detail {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: #fff;
+}
+
+/* TOP BAR */
+.top-bar {
+  padding: 30px 0 10px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #4a90e2;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.back-btn:hover {
+  color: #e3398b;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 34px;
+  margin: 10px 0;
+  color: #111;
+}
+
+.date {
+  color: #e3398b;
+  font-weight: 600;
+}
+
+/* BOUTON */
+.share-btn {
+  margin-top: 20px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #e3398b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.share-btn:hover {
+  background: #4a90e2;
+}
+
+/* CONTENU */
+.content {
+  margin: 60px auto;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #333;
+  max-width: 800px;
+}
+
+/* RELATED */
+.related {
+  margin: 80px auto;
+}
+
+.related h2 {
+  margin-bottom: 30px;
+  color: #4a90e2;
+}
+
+/* GRID FIX */
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 👈 important */
+  gap: 20px;
+}
+
+.related-card {
+  display: flex;
+  gap: 15px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid #eee;
+}
+
+.related-card:hover {
+  transform: translateY(-5px);
+}
+
+.related-card img {
+  width: 120px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-body h3 {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* GROUPE */
+.share-group {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.share-group span {
+  font-size: 14px;
+  color: #555;
+}
+
+/* BOUTONS */
+.share-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* COULEURS PAR RÉSEAU */
+.share-btn.whatsapp {
+  background: #25D366;
+}
+
+.share-btn.facebook {
+  background: #1877F2;
+}
+
+.share-btn.twitter {
+  background: #000;
+}
+
+/* HOVER */
+.share-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
