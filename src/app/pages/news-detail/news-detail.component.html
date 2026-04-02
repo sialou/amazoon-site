@@ -1,46 +1,58 @@
 <section class="news-detail">
 
-  <!-- HEADER SIMPLE -->
-  <div class="top-bar container">
-    <button class="back-btn" routerLink="/actualites">
-      ← Retour aux actualités
-    </button>
-  </div>
+  <!-- HERO FULL -->
+  <div class="hero-full">
+    <img [src]="news?.image" alt="">
 
-  <!-- HERO -->
-  <div class="hero container">
-    <div class="hero-image">
-      <img [src]="news?.image" alt="">
-    </div>
+    <div class="overlay"></div>
 
-    <div class="hero-text">
+    <div class="hero-content container">
+      <button class="back-btn" routerLink="/actualites">
+        ← Retour
+      </button>
+
       <span class="date">
         {{ news?.date | date:'longDate' }}
       </span>
 
       <h1>{{ news?.title }}</h1>
 
-    <div class="share-group">
-  <span>Partager :</span>
-
-  <button class="share-btn whatsapp" (click)="share('whatsapp')">
-    <i class="fab fa-whatsapp"></i>
-  </button>
-
-  <button class="share-btn facebook" (click)="share('facebook')">
-    <i class="fab fa-facebook-f"></i>
-  </button>
-
-  <button class="share-btn twitter" (click)="share('twitter')">
-    <i class="fab fa-x-twitter"></i>
-  </button>
-</div>
+     
     </div>
   </div>
 
   <!-- CONTENU -->
   <div class="content container">
-    <div [innerHTML]="news?.content"></div>
+    <div class="article" [innerHTML]="news?.content"></div>
+    <div class="article-share">
+  <h3>Partager cet article</h3>
+
+  <div class="share-buttons">
+
+    <button class="share whatsapp" (click)="share('whatsapp')">
+      <i class="fab fa-whatsapp"></i>
+      WhatsApp
+    </button>
+
+    <button class="share facebook" (click)="share('facebook')">
+      <i class="fab fa-facebook-f"></i>
+      Facebook
+    </button>
+
+    <button class="share twitter" (click)="share('twitter')">
+      <i class="fab fa-x-twitter"></i>
+      Twitter
+    </button>
+
+  </div>
+</div>
+  </div>
+
+  <!-- CITATION IMPACT -->
+  <div class="quote container">
+    <p>
+      “Chaque fille connectée est une opportunité qui transforme une communauté entière.”
+    </p>
   </div>
 
   <!-- AUTRES ACTUALITÉS -->
@@ -53,10 +65,14 @@
         *ngFor="let item of relatedNews"
         [routerLink]="['/actualites', item.slug]"
       >
-        <img [src]="item.image">
+        <div class="img-wrap">
+          <img [src]="item.image">
+        </div>
+
         <div class="card-body">
-          <h3>{{ item.title }}</h3>
           <span>{{ item.date | date:'mediumDate' }}</span>
+          <h3>{{ item.title }}</h3>
+          <p>Lire l’article →</p>
         </div>
       </article>
     </div>
