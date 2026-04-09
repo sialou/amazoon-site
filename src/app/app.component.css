@@ -5,7 +5,10 @@
   --light: #f8fafc;
   --border: #e5e7eb;
   --radius: 10px;
+ 
 }
+
+
 * {
   font-family: 'Poppins', Arial, sans-serif;
 }

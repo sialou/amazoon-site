@@ -34,4 +34,15 @@ export class DonateComponent {
   selectPayment(method: string) {
     this.paymentMethod = method;
   }
+
+showSuccess = false;
+
+submitDonation() {
+  // simulation paiement
+  this.showSuccess = true;
+}
+
+closeSuccess() {
+  this.showSuccess = false;
+}
 }

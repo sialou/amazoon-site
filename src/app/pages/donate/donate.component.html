@@ -189,21 +189,21 @@
         <div class="payment-item"
              [class.active]="paymentMethod === 'virement'"
              (click)="selectPayment('virement')">
-          <i class="fab fa-bolt"></i>
+          <i class="fas fa-bolt"></i>
           <span>Virement instantané</span>
         </div>
 
         <div class="payment-item"
              [class.active]="paymentMethod === 'mobile'"
              (click)="selectPayment('mobile')">
-          <i class="fab fa-wallet"></i>
+          <i class="fas fa-wallet"></i>
           <span>Mobile Money</span>
         </div>
 
          <div class="payment-item"
              [class.active]="paymentMethod === 'check'"
              (click)="selectPayment('check')">
-          <i class="fab fa-money-check"></i>
+          <i class="fas fa-money-check"></i>
           <span>Chèque</span>
         </div>
 
@@ -214,5 +214,23 @@
     <button class="btn-donate">Valider mon don</button>
 
   </div>
+
+  <div class="success-overlay" *ngIf="showSuccess">
+  <div class="success-card">
+
+    <div class="checkmark">
+      ✔
+    </div>
+
+    <h2>Merci pour votre don 💖</h2>
+
+    <p>
+      Votre contribution aide à transformer la vie de milliers de femmes et jeunes filles.
+    </p>
+
+    <button (click)="closeSuccess()">Continuer</button>
+
+  </div>
+</div>
 
 </section>

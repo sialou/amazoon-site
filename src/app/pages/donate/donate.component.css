@@ -116,6 +116,19 @@
   font-family: 'Poppins', Arial, sans-serif;
 }
 
+.checkbox {
+  display: flex;
+  align-items: flex-start; /* 🔥 aligne verticalement */
+  gap: 10px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+.checkbox input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
 /* FORMES */
 .support-pattern span {
   position: absolute;
@@ -278,133 +291,299 @@
 
 
 /*new*/
+/* =========================
+SECTION DONATION PREMIUM
+========================= */
+
 .donation-section {
-  background:
-    linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92));
+  position: relative;
   padding: 6rem 1rem;
+  background: linear-gradient(135deg, #f7f9fc, #ffffff);
+  overflow: hidden;
 }
 
+/* FORMES DECOR */
+.donation-section::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 3px solid #e3398b;
+  border-radius: 50%;
+  top: -100px;
+  right: -100px;
+  opacity: 0.08;
+  animation: float 10s infinite ease-in-out;
+}
+
+.donation-section::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 220px;
+  background: #4a90e2;
+  bottom: 10%;
+  left: 10%;
+  opacity: 0.15;
+  animation: float 8s infinite ease-in-out;
+}
+
+/* CARD PRINCIPALE */
 .donation-card {
-  max-width: 700px;
+  max-width: 750px;
   margin: auto;
-  background: white;
+  background: #ffffff;
   padding: 3rem;
   border-radius: 20px;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.1);
+  box-shadow: 0 40px 100px rgba(0,0,0,0.08);
+  position: relative;
+  z-index: 2;
+  animation: fadeUp 0.8s ease forwards;
 }
 
-/* SEGMENTED SWITCH */
+/* TITRE */
+.donation-card h2 {
+  font-size: 2rem;
+  color: #4a90e2;
+  margin-bottom: 1rem;
+}
+
+.donation-card h3 {
+  margin: 1.5rem 0 1rem;
+  color: #e3398b;
+}
+
+/* =========================
+SWITCH DESIGN
+========================= */
+
 .segmented-switch {
   display: flex;
-  background: #e5e5e5;
-  border-radius: 10px;
-  overflow: hidden;
+  border-radius: 50px;
+  background: #f1f5f9;
+  padding: 5px;
   margin-bottom: 2rem;
-}
-
-.segmented-switch.small {
-  font-size: 0.9rem;
 }
 
 .segment {
   flex: 1;
+  padding: 12px;
   text-align: center;
-  padding: 1rem;
+  border-radius: 50px;
   cursor: pointer;
-  position: relative;
+  font-weight: 500;
   transition: 0.3s;
 }
 
 .segment.active {
-  background: #e3398b;
-  color: white;
+  background: linear-gradient(135deg, #e3398b, #4a90e2);
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(227,57,139,0.3);
 }
 
-.triangle {
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid #e3398b;
-}
+/* =========================
+MONTANTS
+========================= */
 
-/* MONTANTS */
 .amount-options {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
   margin-bottom: 1rem;
 }
 
 .amount-options button {
-  padding: 0.6rem 1.2rem;
+  padding: 12px;
   border-radius: 30px;
-  border: 2px solid #4a90e2;
-  background: white;
+  border: 1px solid #ddd;
+  background: #fff;
   cursor: pointer;
   transition: 0.3s;
+  font-weight: 500;
+}
+
+.amount-options button:hover {
+  border-color: #e3398b;
 }
 
 .amount-options button.selected {
-  background: #4a90e2;
+  background: linear-gradient(135deg, #e3398b, #4a90e2);
   color: white;
-  border-color: #4a90e2;
+  border: none;
 }
 
-/* FORM */
+/* INPUTS */
 input, select, textarea {
   width: 100%;
-  padding: 0.8rem;
+  padding: 12px;
   margin-bottom: 1rem;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 1px solid #ddd;
+  transition: 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #e3398b;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(227,57,139,0.1);
 }
 
 .row {
   display: flex;
-  gap: 1rem;
+  gap: 10px;
 }
 
-.checkbox {
-  margin-bottom: 1rem;
-}
+/* =========================
+PAIEMENT
+========================= */
 
-/* PAIEMENT */
 .payment-logos {
   display: flex;
-  gap: 1.5rem;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .payment-item {
-  border: 2px solid #ddd;
+  flex: 1;
+  min-width: 120px;
+  border: 1px solid #ddd;
   padding: 1rem;
-  border-radius: 12px;
-  cursor: pointer;
+  border-radius: 14px;
   text-align: center;
+  cursor: pointer;
   transition: 0.3s;
-  width: 110px;
 }
 
 .payment-item i {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 5px;
 }
 
 .payment-item.active {
   border-color: #e3398b;
-  background: rgba(227,57,139,0.1);
+  background: rgba(227,57,139,0.08);
+  transform: translateY(-3px);
 }
+
+/* =========================
+BOUTON FINAL
+========================= */
 
 .btn-donate {
   width: 100%;
-  padding: 1rem;
-  background: #4a90e2;
-  color: white;
+  padding: 1.2rem;
+  border-radius: 50px;
   border: none;
-  border-radius: 40px;
+  background: linear-gradient(135deg, #e3398b, #4a90e2);
+  color: #fff;
   font-size: 1.1rem;
   cursor: pointer;
   margin-top: 2rem;
+  transition: 0.3s;
+}
+
+.btn-donate:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(227,57,139,0.3);
+}
+
+/* =========================
+ANIMATION
+========================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-25px); }
+  100% { transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .amount-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
+
+.success-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.success-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 400px;
+  animation: popIn 0.5s ease;
+}
+
+.checkmark {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #e3398b;
+  color: white;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  animation: scaleUp 0.5s ease;
+}
+
+.success-card h2 {
+  margin: 20px 0 10px;
+  color: #4a90e2;
+}
+
+.success-card button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  background: #e3398b;
+  color: white;
+  cursor: pointer;
+}
+
+/* ANIMATIONS */
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
