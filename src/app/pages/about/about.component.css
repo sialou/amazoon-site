@@ -101,7 +101,7 @@
     transform: scale(1);
   }
 
-  .title {
+  .title,.about-header h1 {
     font-size: 36px;
   }
 }
@@ -260,6 +260,7 @@
   border-radius: 20px;
 }
 
+
 .leader-card h3 {
   font-size: 24px;
   margin-bottom: 8px;
@@ -370,4 +371,38 @@ ul, ol {
   25% { transform: translateX(-50%) translateY(5px) rotate(5deg); }
   50% { transform: translateX(-50%) translateY(-5px) rotate(-5deg); }
   75% { transform: translateX(-50%) translateY(5px) rotate(5deg); }
+}
+@media (max-width: 768px) {
+
+
+.description, .about-header p {
+  font-size: 15px;
+  }
+  .about-text h2, .about-vision h2 ,.about-mission h2  {
+  font-size: 28px;
+}
+.about-text p,.about-vision p, .about-mission p  {
+  font-size: 14px;
+}
+
+.about-values h2 {
+  font-size: 30px;
+
+}
+
+.value-card p,.leader-card p {
+  font-size: 13px;
+}
+.leader-card h3 {
+  font-size: 20px;
+ 
+}
+.about-content {
+   grid-template-columns: 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+ 
+
 }

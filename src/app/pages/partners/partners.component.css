@@ -397,19 +397,6 @@
   transform: translateY(-50%);
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 992px) {
-  .partnership-header {
-    grid-template-columns: 1fr;
-    padding: 70px 30px;
-  }
-
-  .header-text h1 {
-    font-size: 38px;
-  }
-}
 
 
 /*fin*/
@@ -492,7 +479,7 @@
 /* ---------- MOBILE : VERTICAL ---------- */
 @media (max-width: 768px) {
   .partners-strip.amazoon {
-    padding: 70px 0;
+    padding: 20px 0;
   }
 
   .partners-track {
@@ -501,9 +488,14 @@
   }
 
   .partner-card {
-    width: 100%;
-    height: 130px;
+   width: 30%;
+  height: 200px;
+  margin-left: 25px; 
   }
+
+  .partners-slider {
+    height: 300px;
+}
 
   @keyframes partners-scroll-vertical {
     from {
@@ -515,5 +507,22 @@
   }
 }
 
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 992px) {
+  .partnership-header {
+    grid-template-columns: 1fr;
+    padding: 70px 30px;
+  }
+  .bg-section h2,.header-text h1, .how-to-involve h2{
+    font-size: 30px;
+}
+
+.partners-strip h2{
+    font-size: 25px;
+    margin: 5px;
+}
+}
 
 /*fin*/

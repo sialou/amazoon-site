@@ -294,6 +294,15 @@
   .footer {
     padding: 4rem 2rem 2rem;
   }
+  .menu-toggle {
+  font-size: 23px;
+  }
+  .nav a,.btn, .socials a {
+ 
+  font-size: 12px;
+  }
+   
+
 }
 
 /* BOUTON HAMBURGER */
